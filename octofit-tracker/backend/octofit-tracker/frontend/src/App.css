@@ -1,8 +1,165 @@
 
+
 body {
   background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
   min-height: 100vh;
   color: #22223b;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+.octofit-logo {
+  height: 48px;
+  width: auto;
+  margin-right: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%) !important;
+  box-shadow: 0 2px 8px rgba(58,134,255,0.08);
+  border-bottom: 3px solid #ffbe0b;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-link.active {
+  color: #ffbe0b !important;
+  font-weight: bold;
+}
+.nav-link {
+  color: #fff !important;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #ff006e !important;
+}
+
+.App {
+  text-align: center;
+  color: #22223b;
+}
+
+.App-logo {
+  height: 48px;
+  width: auto;
+  pointer-events: none;
+  margin-right: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Headings */
+h1, .display-4, h2, .h4, .card-title {
+  color: #3a86ff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.card-header {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Table styles */
+table.table {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(58,134,255,0.06);
+}
+thead.table-primary, thead.table-success, thead.table-info, thead.table-secondary, thead.table-warning {
+  background: linear-gradient(90deg, #3a86ff 0%, #ffbe0b 100%);
+  color: #fff;
+}
+tbody tr:hover {
+  background: #f1f3fa;
+}
+
+/* Button styles */
+.btn-primary, .btn-info, .btn-success, .btn-warning, .btn-secondary {
+  border-radius: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(58,134,255,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #3a86ff 0%, #ffbe0b 100%);
+  border: none;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #ffbe0b 0%, #3a86ff 100%);
+  color: #fff;
+}
+.btn-info {
+  background: linear-gradient(90deg, #00b4d8 0%, #8338ec 100%);
+  border: none;
+}
+.btn-info:hover {
+  background: linear-gradient(90deg, #8338ec 0%, #00b4d8 100%);
+  color: #fff;
+}
+.btn-success {
+  background: linear-gradient(90deg, #43aa8b 0%, #ffbe0b 100%);
+  border: none;
+}
+.btn-success:hover {
+  background: linear-gradient(90deg, #ffbe0b 0%, #43aa8b 100%);
+  color: #fff;
+}
+.btn-warning {
+  background: linear-gradient(90deg, #ffbe0b 0%, #ff006e 100%);
+  border: none;
+  color: #22223b;
+}
+.btn-warning:hover {
+  background: linear-gradient(90deg, #ff006e 0%, #ffbe0b 100%);
+  color: #fff;
+}
+.btn-secondary {
+  background: linear-gradient(90deg, #22223b 0%, #3a86ff 100%);
+  border: none;
+}
+.btn-secondary:hover {
+  background: linear-gradient(90deg, #3a86ff 0%, #22223b 100%);
+  color: #fff;
+}
+
+/* Card styles */
+.card {
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(58,134,255,0.10);
+  border: none;
+}
+.card-header {
+  border-radius: 18px 18px 0 0;
+}
+
+/* Link styles */
+a, .App-link, .navbar a, .nav-link, .navbar-brand {
+  color: #3a86ff !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+a:hover, .App-link:hover, .navbar a:hover, .nav-link:hover, .navbar-brand:hover {
+  color: #ff006e !important;
+}
+
+/* Favicon (for reference, favicon.ico should be in public/) */
+
+/* Responsive logo alignment */
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+  .App-logo, .octofit-logo {
+    height: 32px;
+    margin-right: 8px;
+  }
 }
 
 .App {

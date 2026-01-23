@@ -1,6 +1,6 @@
 
-import logo from '../public/octofitapp-small.png';
 
+import logo from '../public/octofitapp-small.png';
 import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
@@ -8,11 +8,10 @@ import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
 
-
 function App() {
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+      <nav className="navbar navbar-expand-lg navbar-dark mb-4 shadow-sm">
         <div className="container-fluid">
           <Link className="navbar-brand fw-bold d-flex align-items-center" to="/">
             <img src={logo} alt="Octofit Logo" className="App-logo me-2" />
@@ -29,6 +28,11 @@ function App() {
               <li className="nav-item"><NavLink className="nav-link" to="/users">Users</NavLink></li>
               <li className="nav-item"><NavLink className="nav-link" to="/workouts">Workouts</NavLink></li>
             </ul>
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <a className="btn btn-outline-light ms-2" href="https://github.com/mjadach-accenture/skills-build-applications-w-copilot-agent-mode" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -39,7 +43,15 @@ function App() {
           <Route path="/teams" element={<Teams />} />
           <Route path="/users" element={<Users />} />
           <Route path="/workouts" element={<Workouts />} />
-          <Route path="/" element={<div className="text-center mt-5"><h1 className="display-4">Welcome to Octofit Tracker!</h1><p className="lead">Track your fitness, join teams, and compete on the leaderboard.</p></div>} />
+          <Route path="/" element={
+            <div className="text-center mt-5">
+              <div className="card shadow-lg p-4 mx-auto" style={{maxWidth: 600}}>
+                <h1 className="display-4 mb-3">Welcome to <span className="text-primary">Octofit Tracker!</span></h1>
+                <p className="lead">Track your fitness, join teams, and compete on the leaderboard.</p>
+                <a className="btn btn-primary btn-lg mt-3" href="/activities">Get Started</a>
+              </div>
+            </div>
+          } />
         </Routes>
       </div>
     </Router>
